@@ -17,8 +17,8 @@ class SearchPage extends Component {
 
 
 
-  handleSearchCallback = async (word) => {
-    const lang = 'en'
+  handleSearchCallback = async (word, lang) => {
+    //const language = 'en'
     console.log("Word: ", word)
     this.setState({ word })
 
@@ -47,7 +47,7 @@ class SearchPage extends Component {
     return (
       <div className="searchContainer">
 
-        <SearchBar handleSearchCallback={(word) => this.handleSearchCallback(word)} />
+        <SearchBar handleSearchCallback={(word, language) => this.handleSearchCallback(word, language)} />
        {this.state.word &&
         <h3>Similar words to {this.state.word}</h3>
        } 
