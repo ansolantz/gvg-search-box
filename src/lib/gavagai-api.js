@@ -16,7 +16,7 @@ class GavagaiAPI {
   async getSimilarWords(lang, word) {
 
     let response = await this.GavagaiAPI
-    .get(`/${lang}/${word}?apiKey=${env.API_KEY}&additionalFields=SEMANTICALLY_SIMILAR_WORDS`)
+      .get(`/${lang}/${word}?apiKey=${env.API_KEY}&additionalFields=SEMANTICALLY_SIMILAR_WORDS`)
     return response;
 
     // return this.GavagaiAPI
@@ -27,7 +27,14 @@ class GavagaiAPI {
     //     })
   }
 
+  async getWordInfo(lang, word) {
+    let response = await this.GavagaiAPI
+      .get(`/${lang}/${word}?apiKey=${env.API_KEY}`)
+    return response;
+
+  }
+
 }
 
 const gavagaiAPI = new GavagaiAPI();
-export default gavagaiAPI ;
+export default gavagaiAPI;

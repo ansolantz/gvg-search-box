@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
-import SearchPage from './pages/SearchPage'
+import { Switch, Route } from 'react-router-dom';
+import SearchPage from './pages/SearchPage';
+import WordInfoPage from './pages/WordInfoPage';
 
 import './App.css';
 class App extends Component {
-  render(){
+  render() {
     return (
-      <div className="container">
-        <SearchPage />
+      <div className='appContainer'>
+        <Switch>
+          <Route exact path='/' component={SearchPage}></Route>
+          <Route exact path='/:lang/:word' component={WordInfoPage}></Route>
+        </Switch>
+
       </div>
     );
   }
- 
+
 }
 
 export default App;

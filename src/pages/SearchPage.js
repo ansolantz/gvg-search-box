@@ -10,7 +10,8 @@ class SearchPage extends Component {
 
     this.state = {
       similarWords: [],
-      word: ''
+      word: '',
+      lang: ''
     }
 
   }
@@ -20,7 +21,7 @@ class SearchPage extends Component {
   handleSearchCallback = async (word, lang) => {
     //const language = 'en'
     console.log("Word: ", word)
-    this.setState({ word })
+    this.setState({ word, lang })
 
     let response = await gavagaiAPI.getSimilarWords(lang, word)
 
@@ -43,20 +44,20 @@ class SearchPage extends Component {
   }
 
   render() {
-    const { similarWords } = this.state
+    const { similarWords, word, lang } = this.state
     return (
       <div className="searchContainer">
 
         <SearchBar handleSearchCallback={(word, language) => this.handleSearchCallback(word, language)} />
-       {this.state.word &&
-        <h3>Similar words to {this.state.word}</h3>
-       } 
-        
+        {this.state.word &&
+          <h3>Similar words to {word}</h3>
+        }
+
         {
-          similarWords.map((word, index) => {
+          similarWords.map((similarWord, index) => {
             return (
 
-              <WordsDisplay key={index} similarWord={word} />
+              <WordsDisplay key={index} similarWord={similarWord} language={lang} />
 
             )
           })
