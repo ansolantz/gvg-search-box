@@ -9,16 +9,22 @@ class GavagaiAPI {
 
     this.GavagaiAPI = axios.create({
       baseURL: "https://api.gavagai.se/v3/lexicon",
-      withCredentials: true
+      withCredentials: false
     });
   }
 
-  getSimilarWords(lang, word) {
-    return this.GavagaiAPI
-        .get(`/${lang}/${word}?apiKey=${env.API_KEY}`)
-        .then(response => {
-          console.log(response);
-        })
+  async getSimilarWords(lang, word) {
+
+    let response = await this.GavagaiAPI
+    .get(`/${lang}/${word}?apiKey=${env.API_KEY}&additionalFields=SEMANTICALLY_SIMILAR_WORDS`)
+    return response;
+
+    // return this.GavagaiAPI
+    //     .get(`/${lang}/${word}?apiKey=${env.API_KEY}&additionalFields=SEMANTICALLY_SIMILAR_WORDS`)
+    //     .then(response => {
+    //       console.log(response);
+    //       return response;
+    //     })
   }
 
 }
