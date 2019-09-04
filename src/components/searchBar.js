@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './SearchBar.css';
+
 
 
 class SearchBar extends Component {
@@ -40,25 +42,37 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="searchBar">
-        <div>Search</div>
+
+      <div className="search-bar">
+        <h1>Search for a word</h1>
         <div>
           <form onSubmit={this.handleSubmit}>
-            <input type="text" className="searchFrm" name="searchWord" placeholder="Search"
-              onChange={this.handleChange} />
-            <select name="language" onChange={this.handleChange}>
-              <option value="">Select language</option>
-              <option value="en">English</option>
-              <option value="sv">Swedish</option>
-              <option value="es">Spanish</option>
-              <option value="fr">France</option>
-            </select>
+            <div className="inner-form">
+              <div className="first-wrap">
+                <input type="text" className="search-field" name="searchWord" placeholder="Enter a word"
+                  onChange={this.handleChange} />
+              </div>
+              <div className="second-wrap">
 
-            <button type="submit">Search</button>
+                <select name="language" className="languaes-select" onChange={this.handleChange}>
+                  <option value="">Language</option>
+                  <option value="en">English</option>
+                  <option value="sv">Swedish</option>
+                  <option value="es">Spanish</option>
+                  <option value="fr">France</option>
+                </select>
+
+              </div>
+              <div className="third-wrap">
+                <button className="btn-search" type="submit">SEARCH</button>
+              </div>
+            </div>
           </form>
+
           <div className="errorMessage">{this.state.errorMessage}</div>
         </div>
       </div>
+
     );
   }
 }

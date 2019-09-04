@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SearchBar from './../components/SearchBar'
 import WordsDisplay from './../components/WordsDisplay'
 import gavagaiAPI from './../lib/gavagai-api';
+import './SearchPage.css';
 
 class SearchPage extends Component {
 
@@ -46,7 +47,9 @@ class SearchPage extends Component {
   render() {
     const { similarWords, word, lang } = this.state
     return (
-      <div className="searchContainer">
+      <div className="page-container">
+
+
 
         <SearchBar handleSearchCallback={(word, language) => this.handleSearchCallback(word, language)} />
         {this.state.word &&
