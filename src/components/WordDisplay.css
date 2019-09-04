@@ -1,0 +1,14 @@
+
+
+.word-tag {
+  background-color: #33ceff;
+  border: 1px solid #0c87d1;
+  color: #fff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-family: Helvetica, sans-serif;
+  padding: 4px 10px;
+  box-shadow: none;
+  margin: 5px;
+}

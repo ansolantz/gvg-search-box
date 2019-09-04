@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
 
+import './WordDisplay.css';
 
 
 class WordsDisplay extends Component {
@@ -9,11 +10,7 @@ class WordsDisplay extends Component {
     const lang = this.props.language;
     const similarWord = this.props.similarWord.word;
     return (
-      <div className='wordDisplay'>
-        <div>
-          <NavLink to={`/${lang}/${similarWord}`}>{similarWord}</NavLink>
-        </div>
-      </div>
+      <NavLink className="word-tag" to={`/${lang}/${similarWord}`}>{similarWord}</NavLink>
     );
   }
 }

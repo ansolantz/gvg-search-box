@@ -24,7 +24,10 @@
 @media screen and (max-width: 767px){
   .inner-form {
     flex-wrap: wrap;
-    padding: 20px;  
+    /* padding: 20px;   */
+  }
+  .search-bar{
+    padding: 20px;
   }
   .first-wrap{
     margin: 5px 0px;
@@ -53,6 +56,7 @@ input, button, select {
   font-size: 16px;
   color: #333;
   border: 1px solid #e5e5e5;
+  outline: 0;
 }
 
 
@@ -61,7 +65,7 @@ input, button, select {
   box-shadow: none;
 }
 
-.languaes-select {
+.languages-select {
   -webkit-appearance: button;
   border-radius: 0px;
   /* -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); */

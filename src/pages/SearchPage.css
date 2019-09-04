@@ -6,3 +6,18 @@
 .page-header__shape {
   width: 100%;
 }
+
+.word-display {
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+@media screen and (max-width: 767px){
+
+  .word-display{
+    margin: 5px 20px;
+  }
+}

@@ -49,25 +49,21 @@ class SearchPage extends Component {
     return (
       <div className="page-container">
 
-
-
         <SearchBar handleSearchCallback={(word, language) => this.handleSearchCallback(word, language)} />
+
+
         {this.state.word &&
           <h3>Similar words to {word}</h3>
         }
-
-        {
-          similarWords.map((similarWord, index) => {
-            return (
-
-              <WordsDisplay key={index} similarWord={similarWord} language={lang} />
-
-            )
-          })
-        }
-
-
-
+        <div className="word-display">
+          {
+            similarWords.map((similarWord, index) => {
+              return (
+                <WordsDisplay key={index} similarWord={similarWord} language={lang} />
+              )
+            })
+          }
+        </div>
       </div>
     );
   }

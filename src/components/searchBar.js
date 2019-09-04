@@ -54,7 +54,7 @@ class SearchBar extends Component {
               </div>
               <div className="second-wrap">
 
-                <select name="language" className="languaes-select" onChange={this.handleChange}>
+                <select name="language" className="languages-select" onChange={this.handleChange}>
                   <option value="">Language</option>
                   <option value="en">English</option>
                   <option value="sv">Swedish</option>
