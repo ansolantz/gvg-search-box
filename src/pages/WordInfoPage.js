@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import gavagaiAPI from './../lib/gavagai-api';
+import './WordInfoPage.css';
 
 class WordInfoPage extends Component {
 
@@ -11,7 +12,6 @@ class WordInfoPage extends Component {
       searchWord: '',
       errorMessage: ''
     }
-
   }
 
   componentDidMount() {
@@ -41,20 +41,32 @@ class WordInfoPage extends Component {
   render() {
     const { frequency, documentFrequency, absoluteRank, relativeRank, vocabularySize, additionalInformation } = this.state.wordInfo
     return (
-      <div className="container">
+      <div className="page-container">
         <h1>More info about {this.state.searchWord}</h1>
-        {Object.keys(this.state.wordInfo).length > 0 &&
-          <div>
-            <p>Frequency: {frequency}</p>
-            <p>DocumentFrequency: {documentFrequency}</p>
-            <p>Absolute Rank: {absoluteRank}</p>
-            <p>Relative Rank: {relativeRank}</p>
-            <p>Vocabulary Size: {vocabularySize}</p>
-            <p>Additional Information: {additionalInformation.link}</p>
-          </div>
-        }
+        <div className="word-info-container">
 
-        <p className="errorMessage">{this.state.errorMessage} </p>
+          {Object.keys(this.state.wordInfo).length > 0 &&
+            <div>
+              <p>Frequency: {frequency ? frequency : 'No frequency info available'}</p>
+              <p>DocumentFrequency: {documentFrequency ? documentFrequency : 'No document frequency info available'}</p>
+              <p>Absolute Rank: {absoluteRank ? absoluteRank : 'No absolute rank info available'}</p>
+              <p>Relative Rank: {relativeRank ? relativeRank : 'No relative rank info available'}</p>
+              <p>Vocabulary Size: {vocabularySize ? vocabularySize : 'No vocabulary size info available'}</p>
+              <p>Additional Information: {(additionalInformation && additionalInformation.link) ?
+                <a href={additionalInformation.link}>{additionalInformation.link}</a>
+                :
+                'No additional info available'}
+              </p>
+            </div>
+          }
+          <p className="errorMessage">{this.state.errorMessage} </p>
+
+
+        </div>
+        <div className="button-wrap">
+          <button className="btn-back" onClick={() => this.props.history.go(-1)} type="button">BACK</button>
+        </div>
+
       </div>
     );
   }

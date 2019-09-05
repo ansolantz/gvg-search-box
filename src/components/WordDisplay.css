@@ -12,3 +12,23 @@
   box-shadow: none;
   margin: 5px;
 }
+
+.btn-back{
+  height: 100%;
+  width: 100%;
+  background-color: #33ceff;
+  border: 2px solid #2cb6e0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.618;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s ease;
+  transition: all .2s ease-out, color .2s ease-out;
+  /* transition: all 0.2s ease; */
+}

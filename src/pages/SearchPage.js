@@ -12,7 +12,8 @@ class SearchPage extends Component {
     this.state = {
       similarWords: [],
       word: '',
-      lang: ''
+      lang: '',
+      loading: false
     }
 
   }
@@ -52,18 +53,21 @@ class SearchPage extends Component {
         <SearchBar handleSearchCallback={(word, language) => this.handleSearchCallback(word, language)} />
 
 
-        {this.state.word &&
-          <h3>Similar words to {word}</h3>
+
+        {this.state.similarWords.length > 0 &&
+          <div>
+            <h3>Similar words to {word}</h3>
+            <div className="word-display">
+              {
+                similarWords.map((similarWord, index) => {
+                  return (
+                    <WordsDisplay key={index} similarWord={similarWord} language={lang} />
+                  )
+                })
+              }
+            </div>
+          </div>
         }
-        <div className="word-display">
-          {
-            similarWords.map((similarWord, index) => {
-              return (
-                <WordsDisplay key={index} similarWord={similarWord} language={lang} />
-              )
-            })
-          }
-        </div>
       </div>
     );
   }
