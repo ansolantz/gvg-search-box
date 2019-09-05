@@ -8,7 +8,9 @@ Through the API call I get words with similar meaning to the search input word, 
 I chose to do this assignment in react but without pre-made UI libraries (except for the loader).
 
 ## Install locally
-- npm i
+- npm install
 - npm run start
 
-## Run on github pages
+## Run on github pages 
+
+https://ansolantz.github.io/gvg-search-box/
