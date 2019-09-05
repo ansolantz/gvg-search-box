@@ -10,7 +10,6 @@ const override = css`
     border-color: red;
 `;
 
-
 class WordInfoPage extends Component {
   constructor(props) {
     super(props);

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './SearchBar.css';
 
-
 class SearchBar extends Component {
   constructor(props) {
     super(props);
@@ -31,7 +30,6 @@ class SearchBar extends Component {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   }
-
 
   render() {
     return (
