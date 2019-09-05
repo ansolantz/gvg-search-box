@@ -13,5 +13,6 @@ I chose to do this assignment in react but without pre-made UI libraries (except
 
 ## Run on github pages 
 
-[Link]: https://ansolantz.github.io/gvg-search-box/
+[Gavagai search on Github pages](https://ansolantz.github.io/gvg-search-box/)
+
 

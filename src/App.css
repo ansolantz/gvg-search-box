@@ -61,7 +61,7 @@ h3 {
   z-index: -1;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .app-container::after {
     height: 900px;
   }
