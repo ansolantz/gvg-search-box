@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/gvg-search-box/static/css/main.86f3acf0.chunk.css",
+    "main.css": "/gvg-search-box/static/css/main.29559ff1.chunk.css",
     "main.js": "/gvg-search-box/static/js/main.8a5c7faf.chunk.js",
     "main.js.map": "/gvg-search-box/static/js/main.8a5c7faf.chunk.js.map",
     "runtime~main.js": "/gvg-search-box/static/js/runtime~main.e9556a56.js",
@@ -8,8 +8,8 @@
     "static/js/2.ef7d0da5.chunk.js": "/gvg-search-box/static/js/2.ef7d0da5.chunk.js",
     "static/js/2.ef7d0da5.chunk.js.map": "/gvg-search-box/static/js/2.ef7d0da5.chunk.js.map",
     "index.html": "/gvg-search-box/index.html",
-    "precache-manifest.d81d50712485cf5870b1de2e753d2b78.js": "/gvg-search-box/precache-manifest.d81d50712485cf5870b1de2e753d2b78.js",
+    "precache-manifest.f2cc66a767d74214564acb22607a3917.js": "/gvg-search-box/precache-manifest.f2cc66a767d74214564acb22607a3917.js",
     "service-worker.js": "/gvg-search-box/service-worker.js",
-    "static/css/main.86f3acf0.chunk.css.map": "/gvg-search-box/static/css/main.86f3acf0.chunk.css.map"
+    "static/css/main.29559ff1.chunk.css.map": "/gvg-search-box/static/css/main.29559ff1.chunk.css.map"
   }
 }
