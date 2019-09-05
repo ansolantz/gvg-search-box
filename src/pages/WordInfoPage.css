@@ -24,6 +24,9 @@
   .button-wrap {
     width: 100%;
   }
+  .inner-container {
+    margin: 0px 20px;
+  }
 }
 
 .link {

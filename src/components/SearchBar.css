@@ -37,6 +37,13 @@
   }
 }
 
+@media (max-width: 576px) {
+  .search-bar {
+    padding: 0px 10px;
+    margin: 0px;
+  }
+}
+
 input, button, select {
   font-family: "Raleway", sans-serif;
 }
@@ -62,6 +69,7 @@ input, button, select {
 
 input:active {
   background-color: #fff;
+  box-shadow: none;
 }
 
 .languages-select {

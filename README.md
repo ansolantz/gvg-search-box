@@ -13,4 +13,5 @@ I chose to do this assignment in react but without pre-made UI libraries (except
 
 ## Run on github pages 
 
-https://ansolantz.github.io/gvg-search-box/
+[Link]: https://ansolantz.github.io/gvg-search-box/
+

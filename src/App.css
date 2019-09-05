@@ -18,6 +18,7 @@ body {
   padding: 0;
   font-family: "Raleway", sans-serif;
   font-size: 1em;
+  background-color: transparent;
 }
 
 h1 {
@@ -49,6 +50,7 @@ h3 {
   background-image: url("https://www.walkjogrun.net/wp-content/uploads/2019/05/Early-Morning-Habits-You-Need-To-Have2.jpg");
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   opacity: 0.4;
   top: 0;
@@ -57,4 +59,10 @@ h3 {
   right: 0;
   position: absolute;
   z-index: -1;
+}
+
+@media (max-width: 576px) {
+  .app-container::after {
+    height: 900px;
+  }
 }

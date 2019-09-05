@@ -50,12 +50,12 @@ class WordInfoPage extends Component {
     return (
       <div className="page-container">
         {Object.keys(this.state.wordInfo).length > 0 &&
-          <div>
+          <div className="inner-container">
             <h1>More info about <i>'{this.state.searchWord}'</i></h1>
             <div className="word-info-container">
               <div>
                 <p>Frequency: {frequency ? frequency : 'No frequency info available'}</p>
-                <p>DocumentFrequency: {documentFrequency ? documentFrequency : 'No document frequency info available'}</p>
+                <p>Document Frequency: {documentFrequency ? documentFrequency : 'No document frequency info available'}</p>
                 <p>Absolute Rank: {absoluteRank ? absoluteRank : 'No absolute rank info available'}</p>
                 <p>Relative Rank: {relativeRank ? relativeRank : 'No relative rank info available'}</p>
                 <p>Vocabulary Size: {vocabularySize ? vocabularySize : 'No vocabulary size info available'}</p>
