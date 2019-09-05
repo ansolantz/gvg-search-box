@@ -3,9 +3,16 @@ import SearchBar from './../components/SearchBar'
 import WordsDisplay from './../components/WordsDisplay'
 import gavagaiAPI from './../lib/gavagai-api';
 import './SearchPage.css';
+import { css } from '@emotion/core';
+import BeatLoader from 'react-spinners/BeatLoader';
+
+const override = css`
+    display: block;
+    margin: 0 auto;
+    border-color: red;
+`;
 
 class SearchPage extends Component {
-
   constructor(props) {
     super(props);
 
@@ -15,48 +22,31 @@ class SearchPage extends Component {
       lang: '',
       loading: false
     }
-
   }
 
-
-
   handleSearchCallback = async (word, lang) => {
-    //const language = 'en'
-    console.log("Word: ", word)
-    this.setState({ word, lang })
-
+    this.setState({ loading: true, word, lang })
     let response = await gavagaiAPI.getSimilarWords(lang, word)
 
     try {
       console.log("Response: ", response)
       this.setState({ similarWords: response.data.semanticallySimilarWords })
-
       console.log("State: ", this.state.similarWords)
+      this.setState({ loading: false })
     } catch (error) {
       console.log(error)
+      this.setState({ loading: false })
     }
-
-    // gavagaiAPI.getSimilarWords(lang, word)
-    //   .then((response) => {
-    //     console.log("ok")
-    //     console.log("Response: ", response)
-    //   })
-    //   .catch(error => console.log(error))
-    console.log("After")
   }
 
   render() {
     const { similarWords, word, lang } = this.state
     return (
       <div className="page-container">
-
         <SearchBar handleSearchCallback={(word, language) => this.handleSearchCallback(word, language)} />
-
-
-
         {this.state.similarWords.length > 0 &&
           <div>
-            <h3>Similar words to {word}</h3>
+            <h3 className="padding">Similar words to {word}</h3>
             <div className="word-display">
               {
                 similarWords.map((similarWord, index) => {
@@ -68,10 +58,18 @@ class SearchPage extends Component {
             </div>
           </div>
         }
+        <div className="sweet-loading">
+          <BeatLoader
+            css={override}
+            sizeUnit={"px"}
+            size={10}
+            color={'#33ceff'}
+            loading={this.state.loading}
+          />
+        </div>
       </div>
     );
   }
-
 }
 
 export default SearchPage;

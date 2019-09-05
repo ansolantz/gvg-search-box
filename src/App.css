@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 
 html {
   line-height: 1.15;
@@ -6,36 +9,52 @@ html {
   font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* line-height: 1.45; */
   font-family: "Raleway", sans-serif;
   font-size: 1.125em;
 }
 
 body {
   margin: 0;
+  padding: 0;
   font-family: "Raleway", sans-serif;
   font-size: 1em;
 }
-h1{
+
+h1 {
   font-family: "Raleway", sans-serif;
   font-size: 2em;
-  color: #888;
+  color: #777;
 }
-h2{
+
+h2 {
   font-family: "Raleway", sans-serif;
   font-size: 1.8em;
-  color: #888;
+  color: #777;
 }
-h3{
+
+h3 {
   font-family: "Raleway", sans-serif;
   font-size: 1.5em;
-  color: #888;
+  color: #777;
 }
 
-.appContainer{
-  display:flex;
+.app-container {
+  display: flex;
   justify-content: center;
+  height: 100%;
 }
 
-
-
+.app-container::after {
+  content: "";
+  background-image: url("https://www.walkjogrun.net/wp-content/uploads/2019/05/Early-Morning-Habits-You-Need-To-Have2.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}

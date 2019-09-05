@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
-
 import './SearchBar.css';
 
 
-
 class SearchBar extends Component {
-
   constructor(props) {
     super(props);
 
@@ -14,12 +11,10 @@ class SearchBar extends Component {
       language: '',
       errorMessage: ''
     }
-
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
-
     if (!this.state.searchWord) {
       this.setState({ errorMessage: 'Please enter a word' })
     } else if (!this.state.language) {
@@ -30,8 +25,6 @@ class SearchBar extends Component {
       const { searchWord, language } = this.state
       this.props.handleSearchCallback(searchWord, language);
     }
-
-
   }
 
   handleChange = (event) => {
@@ -42,7 +35,6 @@ class SearchBar extends Component {
 
   render() {
     return (
-
       <div className="search-bar">
         <h1>Search for a word</h1>
         <div>
@@ -53,7 +45,6 @@ class SearchBar extends Component {
                   onChange={this.handleChange} />
               </div>
               <div className="second-wrap">
-
                 <select name="language" className="languages-select" onChange={this.handleChange}>
                   <option value="">Language</option>
                   <option value="en">English</option>
@@ -61,18 +52,15 @@ class SearchBar extends Component {
                   <option value="es">Spanish</option>
                   <option value="fr">France</option>
                 </select>
-
               </div>
               <div className="third-wrap">
                 <button className="btn-search" type="submit">SEARCH</button>
               </div>
             </div>
           </form>
-
-          <div className="errorMessage">{this.state.errorMessage}</div>
+          <div className="error-message">{this.state.errorMessage}</div>
         </div>
       </div>
-
     );
   }
 }

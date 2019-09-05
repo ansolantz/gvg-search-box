@@ -1,35 +1,30 @@
-
-
-* {
-  box-sizing: border-box;
-}
-
 .inner-form {
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-} 
+}
+
 .first-wrap {
   width: 100%;
 }
+
 .second-wrap {
   width: 200px;
 }
+
 .third-wrap {
-  width: 164px;
+  width: 165px;
 }
 
-
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
   .inner-form {
     flex-wrap: wrap;
-    /* padding: 20px;   */
   }
-  .search-bar{
+  .search-bar {
     padding: 20px;
   }
-  .first-wrap{
+  .first-wrap {
     margin: 5px 0px;
   }
   .second-wrap {
@@ -59,16 +54,19 @@ input, button, select {
   outline: 0;
 }
 
-
 .input-field input:focus {
   outline: 0;
   box-shadow: none;
+  background-color: #fff;
+}
+
+input:active {
+  background-color: #fff;
 }
 
 .languages-select {
   -webkit-appearance: button;
   border-radius: 0px;
-  /* -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1); */
   -webkit-padding-end: 20px;
   -webkit-padding-start: 2px;
   -webkit-user-select: none;
@@ -79,7 +77,7 @@ input, button, select {
   outline: 0;
   color: #888;
   border: 1px solid #e5e5e5;
-  font-size: inherit;
+  font-size: 16px;
   overflow: hidden;
   padding: 5px 10px;
   text-overflow: ellipsis;
@@ -92,7 +90,7 @@ input, button, select {
   height: 100%;
   width: 100%;
   background-color: #33ceff;
-  border: 2px solid #2cb6e0;
+  border: 1px solid #2cb6e0;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -105,7 +103,6 @@ input, button, select {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s ease;
   transition: all .2s ease-out, color .2s ease-out;
-  /* transition: all 0.2s ease; */
 }
 
 .btn-search:hover {
@@ -116,4 +113,3 @@ input, button, select {
   outline: 0;
   box-shadow: none;
 }
-
