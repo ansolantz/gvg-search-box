@@ -1,5 +1,6 @@
-# Gavagai Search Box
-**Frontend solution for the Gavangi API.**
+## Gavagai Search Box
+
+**Frontend solution for the Gavagai API.**
 
 The assignment was to build a simple interface that allows a user to input a text, possibly select a language, and run a search. The input of the user should be used as a parameter for the API call to the Lexicon. 
 
@@ -8,11 +9,19 @@ Through the API call I get words with similar meaning to the search input word, 
 I chose to do this assignment in react but without pre-made UI libraries (except for the loader).
 
 ## Install locally
+- Add a config.json file inside src/config with the following content:
+
+  `{`
+
+    `"API_KEY": "your Gavagai api key"`
+
+  `}`
+
 - npm install
+
 - npm run start
 
 ## Run on github pages 
 
 [Gavagai search on Github pages](https://ansolantz.github.io/gvg-search-box/)
-
 
