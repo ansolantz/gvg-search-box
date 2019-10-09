@@ -20,8 +20,3 @@ I chose to do this assignment in react but without pre-made UI libraries (except
 - npm install
 
 - npm run start
-
-## Run on github pages 
-
-[Gavagai search on Github pages](https://ansolantz.github.io/gvg-search-box/)
-
